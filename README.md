@@ -4,7 +4,7 @@ this module must in vnet
 
 Example) Create vnet
 ```
-module "subnet1" {
+module "subnet" {
   source                            = "git://github.com/kwaneung/aztf-module-subnet.git"
 
   prefix                            = "exmp"
