@@ -6,8 +6,4 @@ resource "azurerm_subnet" "example" {
   virtual_network_name = var.vnet_name
   address_prefix       = var.addr_prefix
   
-  tags = {
-    (var.tag_key) = var.tag_value
-  }
-  
 }
