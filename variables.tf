@@ -21,11 +21,3 @@ variable "rg_name" {
 variable "vnet_name" {
  description = "Vnet name"
 }
-
-variable "tag_key" {
-  description = "Key name of tag"        
-}
-
-variable "tag_value" {
-  description = "Value name of tag"        
-}
