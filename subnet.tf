@@ -1,4 +1,4 @@
-resource "azurerm_virtual_network" "example" {
+resource "azurerm_subnet" "example" {
   count               = var.subnet_num
   
   name           			= var.subnet_num == 1 ? var.subnet_name: format("%s_%s_%02d", "subnet", var.subnet_name, count.index + 1)
