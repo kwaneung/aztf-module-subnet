@@ -18,6 +18,7 @@ variable "subnet_prefixes" {
 
 variable "nsg_ids" {
   description = "A map of subnet name to Network Security Group IDs"
+  type        = "map"
 }
 
 variable "tags" {
