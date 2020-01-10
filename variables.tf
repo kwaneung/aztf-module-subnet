@@ -24,3 +24,9 @@ variable "tags" {
     tag2 = "subnet_module"
   }
 }
+
+variable "nsg_id" {
+  description = "nsg id"
+  
+  }
+
