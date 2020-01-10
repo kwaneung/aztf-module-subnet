@@ -16,11 +16,6 @@ variable "subnet_prefixes" {
   default     = ["10.0.1.0/24"]
 }
 
-variable "nsg_ids" {
-  description = "A map of subnet name to Network Security Group IDs"
-  type        = map
-}
-
 variable "tags" {
   description = "The tags to associate with your network and subnets."
 
