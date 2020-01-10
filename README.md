@@ -1,6 +1,6 @@
 # aztf-module-subnet
 
-Resource group and vnet must be created first.
+this module must in vnet
 
 Example) Create vnet
 ```
