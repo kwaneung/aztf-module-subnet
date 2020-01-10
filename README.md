@@ -1,27 +1,24 @@
 # aztf-module-subnet
 
-this module must in vnet
+This module should be preceded by Vnet and NSG
 
 Example) Create vnet
 ```
 module "subnet" {
   source                            = "git://github.com/kwaneung/aztf-module-subnet.git"
 
-  prefix                            = "exmp"
-  
-  subnet_name                         = "exmp_subnet"
-  
-  subnet_num                          = 2
-  
-  addr_prefix                        = "10.0.0.0/24"
+  subnet_names = ["web", "was", "db"]
 
-  rg_name                           = azurerm_resource_group.{resource group ID}.name
-  
-  vnet_name                         = azurerm_resource_group.{vnet ID}.name
-  
-  tag_key                           = "05"
+  vnet_name = module.vnet.vnet_name
 
-  tag_value                         = "this"
-  
+  resource_group_name = azurerm_resource_group.rg.name
+
+  subnet_prefixes = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+
+  tags = {
+      test = "nsg_module"
+    }
+
+  nsg_id = "${module.nsg.id}"
 }
 ```
