@@ -2,7 +2,7 @@ variable "prefix" {
   description = "Prefix for the workspace"
 }
 
-variable subnet_name" {
+variable "subnet_name" {
   description = "Vnet name"        
 }
 
